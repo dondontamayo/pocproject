@@ -1,0 +1,18 @@
+server:
+  port: 8443
+  server-context: /
+  ssl:
+    enabled: true
+    key-store: "src/main/resources/server1-keystore.jks"
+    key-store-password: password1
+    key-store-type: PKCS12
+    client-auth: want
+    trust:
+      enabled: true
+      file: "src/main/resources/server-keystore.jks"
+      password: password
+     
+spring:
+  application:
+    name: ssl-client-service
+
